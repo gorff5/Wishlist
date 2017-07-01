@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { WishlistListComponent } from './wishlist-list/wishlist-list.component';
+import { WishlistAddComponent } from './wishlist-add/wishlist-add.component';
+
 const routes: Routes = [
   {
     path: '',
-    children: []
+    component: WishlistListComponent
+  },
+  {
+    path: 'add/new',
+    component: WishlistAddComponent
+  },
+  {
+    path: 'edit/:id',
+    component: WishlistAddComponent
   }
 ];
 
@@ -13,3 +24,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routableComponents = [
+  WishlistAddComponent,
+  WishlistListComponent
+]

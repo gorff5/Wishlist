@@ -1,0 +1,16 @@
+<section class="wish-list-container container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p-dataGrid [value]="items">
+        <ng-template let-item pTemplate="item">
+          <div class="ui-g-12 ui-md-3">
+            <article class="wishlist-single" (click)="editItem(item)">
+              <h1> {{item.name}}</h1>
+              <p> {{item.details}}</p>
+            </article>
+          </div>
+        </ng-template>
+      </p-dataGrid>
+    </div>
+  </div>
+</section>

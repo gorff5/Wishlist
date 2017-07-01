@@ -1,0 +1,8 @@
+.wishlist-single{
+    transition: .5s all;
+    cursor: pointer;
+    border : 1px solid gray;
+    background: lightblue;
+    text-align: center;
+    &:hover{background: green;}
+}
