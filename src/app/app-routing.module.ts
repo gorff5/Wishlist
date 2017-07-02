@@ -4,6 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { WishlistListComponent } from './wishlist-list/wishlist-list.component';
 import { WishlistAddComponent } from './wishlist-add/wishlist-add.component';
 
+export const routableComponents = [
+  WishlistAddComponent,
+  WishlistListComponent
+]
+
 const routes: Routes = [
   {
     path: '',
@@ -24,7 +29,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routableComponents = [
-  WishlistAddComponent,
-  WishlistListComponent
-]
